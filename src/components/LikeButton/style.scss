@@ -1,0 +1,25 @@
+.LikeButton {
+  .LikedImg {
+    background-position: -25px -137px;
+  }
+  .UnlikedImg {
+    background-position: -50px -137px;
+  }
+  &.CommentLikeButton {
+    min-height: auto;
+    min-width: auto;
+    float: right;
+    .SpriteImage {
+      display: inline-block;
+      background-size: 236px 211px;
+      height: 11px;
+      width: 12px;
+    }
+    .LikedImg {
+      background-position: -187px -175px;
+    }
+    .UnlikedImg {
+      background-position: -212px -199px;
+    }
+  }
+}

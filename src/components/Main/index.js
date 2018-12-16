@@ -3,8 +3,7 @@ import Posts from '../Posts';
 import './style.scss';
 
 class Main extends Component {
-  handleClick = (e, id) => {
-    e.preventDefault();
+  handleClick = (id) => {
     let newObj = {...this.props.posts};
     newObj[id].liked = !newObj[id].liked;
     if (newObj[id].liked) {
@@ -12,6 +11,17 @@ class Main extends Component {
     } else {
       newObj[id].likes -= 1;
     }
+    this.props.postData(newObj);
+  }
+  likeCommentClicked = (postId, cId) => {
+    const newObj = {...this.props.posts};
+    const commentObj = newObj[postId].comments;
+    commentObj.forEach((o) => {
+      if (o.id === cId) {
+        o.liked = !o.liked;
+      }
+      return o;
+    });
     this.props.postData(newObj);
   }
   handleKeyPress = (e, id) => {
@@ -36,7 +46,12 @@ class Main extends Component {
     const postList = Object.values(posts);
     return postList.map((post) => {
       return(
-        <Posts post={post} key={post.id} handleKeyPress={this.handleKeyPress} handleClick={this.handleClick}/>
+        <Posts 
+          post={post} 
+          key={post.id} 
+          handleKeyPress={this.handleKeyPress} 
+          likeCommentClicked={this.likeCommentClicked}
+          handleClick={this.handleClick} />
       )
     });
   }
