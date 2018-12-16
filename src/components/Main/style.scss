@@ -1,0 +1,19 @@
+.MainSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #fafafa;
+    .MainPost {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        width: 100%;
+        @media(min-width: 767px) {
+            padding-top: 60px;
+        }
+    }
+}

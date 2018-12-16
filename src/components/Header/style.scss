@@ -1,0 +1,53 @@
+.Nav {
+  .HiddenNav {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 70px;
+  }
+
+  .AppHeader {
+    background-color: #fff;
+    border-bottom: 1px solid #c3bfbf;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    transition: height .2s ease-in-out;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .MainNav {
+    max-width: 800px;
+    display: flex;
+    padding: 26px 20px;
+    height: 72px;
+    width: 100%;
+  }
+
+  .Logo {
+    background-position: -75px -112px;
+  }
+
+  .Separator {
+    background-color: #262626;
+    height: 28px;
+    margin: 0 16px;
+    width: 1px;
+  }
+
+  .InstaLogo {
+    height: 29px;
+    width: 103px;
+    background-position: 0 0;
+  }
+
+}

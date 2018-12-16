@@ -12,3 +12,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.SpriteImage {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-image: url('./insta.png');
+  background-size: 236px 211px;  
+}
+
+.SmallButton {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  min-height: 40px;
+  min-width: 40px;
+}

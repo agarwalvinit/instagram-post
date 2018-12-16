@@ -1,0 +1,90 @@
+.PostSection {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 40px;
+  font-size: 14px;
+  .PostHeadBlock {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    @media(max-width: 767px) {
+      background-color: #fafafa;
+    }
+    .ProfileImage {
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+    }
+    .UserName {
+      padding-left: 10px;
+      font-weight: bold;
+    }
+  }
+  .PostMiddleBlock {
+    .PostImage {
+      width: 100%;
+    }
+  }
+  .PostBelowBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    .LikeCommentSection {
+      margin-top: 5px;
+    }
+    .TotalLike {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .TimeStamp {
+      text-transform: uppercase;
+      font-size: 10px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+    .CommentListBlock {
+      list-style: none;
+      padding: 0;
+      margin: 5px 0;
+      .CommentList {
+        width: 100%;
+        padding: 5px 0;
+        .CommentUser {
+          font-weight: bold;
+        }
+      }
+    }
+    .AddCommentBlock {
+      border-top: 1px solid #e6e6e6;
+      padding-top: 10px;
+      min-height: 60px;
+      .CommentArea {
+        background: 0 0;
+        border: 0;
+        color: #262626;
+        font-size: inherit;
+        height: 22px;
+        max-height: 80px;
+        outline: 0;
+        padding: 0;
+        resize: none;
+        width: 100%;
+      }
+    }
+  }
+  .LikedImg {
+    background-position: -25px -137px;
+  }
+  .UnlikedImg {
+    background-position: -50px -137px;
+  }
+  .CommentImg {
+    background-position: -25px -112px;
+  }
+}
+
+
